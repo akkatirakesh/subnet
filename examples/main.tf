@@ -1,11 +1,11 @@
 module "subnet" {
   source = "../"
-  vpc-id = "vpc-0a094d99b46285cfb"
-  subnet-cidrblock = "10.0.0.0/24"
+  vpc-id = "vpc-93de4ce9"
+  subnet-cidrblock = var.cidr
 }
 
-provider "aws" {
-  access_key="provide access key"
-  secret_key="provide secret key"
-  region = "us-east-2"
-}cd
+
+
+variable "cidr" {
+  default = "172.31.100.0/24"
+}
